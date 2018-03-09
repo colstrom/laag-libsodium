@@ -16,9 +16,7 @@ module LAAG
   ) || (
     File
       .basename(LIBSODIUM_GEM_ROOT)
-      .match(%r{^laag-libsodium-(?<version>[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+)})
-      .named_captures
-      .fetch('version')
+      .match(%r{^laag-libsodium-(?<version>[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+)})['version']
   )
 
   def self.libsodium
