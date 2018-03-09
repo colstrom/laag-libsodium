@@ -8,7 +8,7 @@ module LAAG
   LIBSODIUM_ORIGIN  = 'github.com/jedisct1/libsodium'
   LIBSODIUM_VERSION = (
     $LOADED_FEATURES
-      .map { |f| f.match %r{^laag-libsodium-(?<version>[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+)} }
+      .map { |f| f.match %r{/laag-libsodium-(?<version>[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+)} }
       .compact
       .map { |gem| gem['version'] }
       .uniq
